@@ -15,6 +15,7 @@ export const signOut = () => {
 
 export const signIn = () => {
     return async (dispatch) => {
+        dispatch({ type: LOGGED_IN, email: 'harry.goon@gmail.com' })
         try {
             await GoogleSignin.hasPlayServices();
             const userInfo = await GoogleSignin.signIn();
